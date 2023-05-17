@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "../curso-javascript"
+		},
+		{
+			"path": "../calculadora-imc"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "curso-javascript"
+	}
+}
