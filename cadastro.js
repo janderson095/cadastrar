@@ -1,74 +1,39 @@
 let area = document.getElementById('area');
 let botao = document.getElementById("botao");
 
-var nomeCadastro = ["Janderson", "Miguel", "Monique", "Maria", "Paulo"];
+var nomeCadastro = [];
+nomeCadastro[0] = 'Janderson';
+nomeCadastro[1] = 'Miguel';
+nomeCadastro[2] = 'Monique';
+nomeCadastro[3] = 'Maria';
+nomeCadastro[4] = 'Paulo';
 
 function entrar() {
     let nome = prompt("Digite o seu nome");
-    let isMatch = false;
+    let i;
 
-    for (let i = 0; i < nomeCadastro.length; i++) {
-        if (nomeCadastro[i] === nome) {
-            area.innerHTML = "Bem-vindo " + nome + "<br>";
+    for (i = 0; i < nomeCadastro.length; i++) {
+        if (nome == nomeCadastro[i]) {
+            area.innerHTML = "Bem vindo " + nome + "<br>";
             let botaoSair = document.createElement("button");
             botaoSair.innerText = "Sair da conta";
             botaoSair.onclick = sair;
             area.appendChild(botaoSair);
-            botao.removeAttribute("hidden");
-            isMatch = true;
-            break;
+            botao.setAttribute("hidden", "true");
+            return;
         }
     }
 
-    if (!isMatch) {
-        alert("Nome não cadastrado. Favor realizar o cadastro!");
-    }
+    alert("Nome não cadastrado, favor realizar cadastro!");
+    area.innerHTML = "Clique no botão para acessar";
 }
 
 function sair() {
-    alert("Até a próxima!");
-    area.innerHTML = "Você saiu!" + "<br>";
+    area.innerHTML = "Clique no botão para acessar";
+    botao.removeAttribute("hidden");
 }
 
 
-// let area = document.getElementById('area');
-// let botao = document.getElementById("botao");
-
-// var nomeCadastro = [5];
-// nomeCadastro[0] = "Janderson";
-// nomeCadastro[1] = "Miguel";
-// nomeCadastro[2] = "Monique";
-// nomeCadastro[3] = "Maria";
-// nomeCadastro[4] = "Paulo";
-
-// function entrar() {
-//     let nome = prompt("Digite o seu nome");
-
-// if (nome != nomeCadastro[i]) {
-    //             alert("Ops, algo deu errado!!!");
-    //             area.innerHTML = "Clique no botão para acessar";}
-
-//     for (i = 0; i < nomeCadastro.length; i++) {
-//        
-//         } else {
-//             if (nomeCadastro == nome) {
-//                 area.innerHTML = "Bem vindo " + nome + "<br>";
-//                 let botaoSair = document.createElement("button");
-//                 botaoSair.innerText = "Sair da conta";
-//                 botaoSair.onclick = sair;
-//                 area.appendChild(botaoSair);
-//                 botao.removeAttribute("hidden");
-//             } else {
-//                 alert("Nome não cadatrado, favor realizar cadastro!")
-//             }
-
-//         }
-//     }
-// }
-// function sair() {
-//     alert("Até a próxima!")
-//     area.innerHTML = ("Você saiu!" + "<br>")
-// }
 
 
 
