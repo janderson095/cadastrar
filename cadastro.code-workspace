@@ -1,10 +1,19 @@
 {
 	"folders": [
 		{
+			"name": "curso-javascript",
 			"path": "../curso-javascript"
 		},
 		{
+			"name": "teclado-virtual",
+			"path": "../teclado-virtual"
+		},
+		{
+			"name": "calculadora-imc",
 			"path": "../calculadora-imc"
+		},
+		{
+			"path": "."
 		}
 	],
 	"settings": {
